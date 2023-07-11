@@ -8,7 +8,7 @@ const reserveFlight = require("./routeFunctions/reserveFlight");
 const getReservations = require("./routeFunctions/getReservations");
 
 const app = express();
-const FRONTEND_URL = env.process.FRONTEND_URL;
+const FRONTEND_URL = process.env.FRONTEND_URL;
 
 const FLIGHTS_API =
   "https://cosmos-odyssey.azurewebsites.net/api/v1.0/TravelPrices";
