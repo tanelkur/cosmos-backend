@@ -33,6 +33,16 @@ app.use(
 );
 
 // ROUTES
+app.get("/*", function (req, res) {
+  res.sendFile(
+    path.join(__dirname, "https://tk-cosmos-app.onrender.com"),
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
+      }
+    }
+  );
+});
 app.get("/api/pricelist", (req, res) => {
   getFlights(res, FLIGHTS_API, FLIGHT_LIST_ARRAY_ID);
 });
