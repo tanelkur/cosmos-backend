@@ -33,15 +33,8 @@ app.use(
 );
 
 // ROUTES
-app.get("/*", function (req, res) {
-  res.sendFile(
-    path.join(__dirname, "../frontend/public/index.html"),
-    function (err) {
-      if (err) {
-        res.status(500).send(err);
-      }
-    }
-  );
+app.get("/", (req, res) => {
+  res.send("Cosmos Odyssey Homepage");
 });
 app.get("/api/pricelist", (req, res) => {
   getFlights(res, FLIGHTS_API, FLIGHT_LIST_ARRAY_ID);
