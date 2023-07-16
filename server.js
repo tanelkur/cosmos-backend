@@ -35,7 +35,7 @@ app.use(
 // ROUTES
 app.get("/*", function (req, res) {
   res.sendFile(
-    path.join(__dirname, "https://tk-cosmos-app.onrender.com"),
+    path.join(__dirname, "../frontend/public/index.html"),
     function (err) {
       if (err) {
         res.status(500).send(err);
