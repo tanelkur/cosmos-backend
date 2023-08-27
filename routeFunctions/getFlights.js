@@ -6,7 +6,6 @@ const getFlights = async (res, FLIGHTS_API, FLIGHT_LIST_ARRAY_ID) => {
   try {
     const response = await axios.get(FLIGHTS_API);
     const { id, validUntil, legs } = response.data;
-    res.send({ id, validUntil, legs }); /// EDIT
 
     const { flightListsArray } = await FlightLists.findById(
       FLIGHT_LIST_ARRAY_ID
