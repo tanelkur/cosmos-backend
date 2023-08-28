@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const getFlights = require("./routeFunctions/getFlights");
 const reserveFlight = require("./routeFunctions/reserveFlight");
 const getReservations = require("./routeFunctions/getReservations");
+const getCurrentFlightlist = require("./routeFunctions/getCurrentFlightlist");
 
 const app = express();
 const FRONTEND_URL = process.env.FRONTEND_URL;
