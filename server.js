@@ -37,8 +37,9 @@ app.use(
 app.get("/", (req, res) => {
   res.send("Cosmos Odyssey Homepage");
 });
-app.get("/api/currentPricelist", (req, res) => {
-  getCurrentFlightlist(res, FLIGHTS_API);
+app.get("/api/currentpricelist", (req, res) => {
+  // To get pricelist quicker because from
+  getCurrentFlightlist(res, FLIGHTS_API); // database it takes too much time to load
 });
 app.get("/api/pricelist", (req, res) => {
   getFlights(res, FLIGHTS_API, FLIGHT_LIST_ARRAY_ID);
